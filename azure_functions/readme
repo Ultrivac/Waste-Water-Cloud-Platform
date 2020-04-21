@@ -1,0 +1,10 @@
+https://medium.com/@nuwanprabhath/sending-messages-from-azure-iot-hub-to-cosmos-db-using-azure-functions-javascript-717d84f8d922
+
+if in the iot hub you get an error regarding epoch 5 whaterver
+change the endpoint consumer from default to another e.g. gateway,
+this is done when you create a new function using the template
+
+also in console of the new function import npm:
+npm init -y
+npm install mongodb --save
+npm install nodemailer --save
