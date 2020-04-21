@@ -1,0 +1,12 @@
+to add a new hub gateway to a current iot hub in azure,
+enter the following commands in azure cloud shell:
+prerq: ensure you have an iot hub and its name
+       and you are in the azure cloud shell
+$> az extension add --name azure-iot
+$> az iot hub device-identity create --hub-name {YourIoTHubName} --device-id MyPythonDevice
+$> az iot hub device-identity show-connection-string --hub-name {YourIoTHubName} --device-id MyPythonDevice --output table
+
+
+
+to view events recieved from client device to cloud, use the following command:
+$> az iot hub monitor-events --hub-name {YourIoTHubName} --device-id MyPythonDevice

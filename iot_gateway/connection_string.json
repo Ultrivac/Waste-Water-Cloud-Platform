@@ -1,0 +1,5 @@
+{
+    "DeviceId" : "IotGateway1",
+    "HostName" : "Cloudhub",
+    "connection_string" : ""
+}
