@@ -1,0 +1,19 @@
+All code below is the foundation for a cloud iot platform based around water quality measaurments.
+The purpose of this cloud platform is to recieve edge device water quality data and display/ alert the user upon 
+the triggering of user defined alerts via the web app dashboard and email notifications.
+iot_gatway -> sends to cloud hub
+cloud hub has two azure functions one to send telemetry data to a cosmos db
+and the other gets user defined alerts from the cosmos db and checks whether the telemetry data triggers thos alerts
+if the data triggers user defined alerts, if the alert is a "warning alert" the user can view triggers for that alert in app dashboard
+if the alerts trigger a "danger alert" the javascript function on the cloud will also send email notifications to the user specified email
+
+iot_gatway -> cloud hub (azure functions triggered here) -> comsos db on cloud-> web app and api
+
+the web app provides secure login system with hashed passwords, a dashboard to view iot devices/ iot gateways and alerts.
+the web app also has a view charts page for each iot device so that you can view interactive charts of the sensor data for each sensor
+the web app also enables you to set alerts for each sensor on the view charts page 
+the alerts you defined are stored in the cosmos db on the cloud and will be triggered upon new telemetry data from your iot devices
+the triggered alerts are viewable in the dashboard and email notifications are sent when danger user defined alerts are triggered
+the api is not authenticated atm but enables the viewing of all data in the cosmos db via get requests
+
+
