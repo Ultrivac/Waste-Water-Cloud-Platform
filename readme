@@ -16,4 +16,10 @@ the alerts you defined are stored in the cosmos db on the cloud and will be trig
 the triggered alerts are viewable in the dashboard and email notifications are sent when danger user defined alerts are triggered
 the api is not authenticated atm but enables the viewing of all data in the cosmos db via get requests
 
+NOTE: you will need to put your own connection strings in the files as specified in the code
+NOTE: you will need to setup your own microsoft azure platform, create iot hub and microsoft cosmos db and web app containers and azure functions that get triggered on via the iot hub
+tutorial for getting azure functions triggered via iot hub (when the iot hub recieves messages: https://medium.com/@nuwanprabhath/sending-messages-from-azure-iot-hub-to-cosmos-db-using-azure-functions-javascript-717d84f8d922)
+Currently this website is live with the url: http://wastewaterapp.azurewebsites.net/
+enjoy!
+
 
